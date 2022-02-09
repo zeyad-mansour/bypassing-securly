@@ -1,0 +1,39 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "conf.js", "securly.min.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.min.js" ],
+      "matches": [ "*://*.youtube.com/*", "*://youtube.com/*", "*://youtube-nocookie.com/*", "*://*.youtube-nocookie.com/*" ],
+      "run_at": "document_idle"
+   }, {
+      "all_frames": true,
+      "js": [ "content2.min.js" ],
+      "matches": [ "*://*.google.com/maps/*", "*://google.com/maps/*" ],
+      "run_at": "document_idle"
+   }, {
+      "all_frames": true,
+      "js": [ "content3.min.js" ],
+      "matches": [ "*://*.google.com/*", "*://google.com/*", "*://*.bing.com/*", "*://bing.com/*", "*://*.search.yahoo.com/*", "*://search.yahoo.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Secure and manage your 1:1 Chromebooks with Securly",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAb9tHNQkaX2R/K5CjzGgei7aQXn4wRkJyL8ZRhje0xjgHRPrK0zPictv4i/G0pIUQjoOpPt7QcgenbwbnJ73rRcNtDP03y69cQt8mIrZssAYcyjxSPYOiOABbWLSFp61YRkzfLbnNg/3brOI5sAXigyvJO7ze7cJFH2S/dmsI3wIDAQAB",
+   "manifest_version": 2,
+   "name": "Securly for Chromebooks",
+   "oauth2": {
+      "client_id": "979354546084.apps.googleusercontent.com",
+      "scopes": [ "email" ]
+   },
+   "permissions": [ "webRequest", "webRequestBlocking", "identity", "*://*/", "file://*", "cookies", "tabs", "browsingData", "identity.email", "geolocation", "idle", "downloads" ],
+   "short_name": "Securly",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.98.26"
+}
